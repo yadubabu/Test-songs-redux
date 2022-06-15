@@ -1,0 +1,19 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-arrow{
+    position: relative;
+    left: 10px;
+    top:-80px
+}
+
+.right-arrow{
+    position: relative;
+    right: 15px;
+    top:-80px
+}
