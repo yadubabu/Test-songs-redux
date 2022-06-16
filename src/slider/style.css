@@ -17,3 +17,15 @@
     right: 15px;
     top:-80px
 }
+.btn button{
+    border-radius: 50%;
+}
+.btn button:hover,.left-arrow:hover,.right-arrow:hover{
+    color: black;
+    background: orange;
+}
+.current{
+    color: aliceblue;
+    background-color: red;
+} 
+

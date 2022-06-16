@@ -6,8 +6,40 @@ import { prevImg } from './action';
 
 const Sliding=(props)=>{
    
-    const imgSrc=require(`./img/img${props.id}.jpg`);
+    const renderImg=()=>{
+        switch(props.id){
+            case '2':
+                return 'btn2 current';
+            case '3':
+                return 'btn3 current';
+            case '4':
+                return 'btn4 current';
+            case '5':
+                return 'btn5 current';
+            default :
+                return 'btn1 current'
+        }
+        // const btns=[1,2,3,4,5];
+    
+        // for(let i=0;i<btns.length;i++){
+        //     // const cur=props.id===btns[i] ? 'current' : '';
+        //     // return `btn${props.id} ${cur}`
+        //     if(props.id===btns[i]){
+        //         return `btn${props.id} current`;
+        //         break;
+        //     }else{
+        //         return `btn${props.id}`
+        //     }
+
+        // }
+    } 
+    
+
+    
    
+
+    const imgSrc=require(`./img/img${props.id}.jpg`);
+    // const cur=props.id>1 ? 'current' : '' ; 
     return(
         <div className='item'>
             <div className='box'>
@@ -17,13 +49,13 @@ const Sliding=(props)=>{
 
             </div>
 
-            <div>
+            <div className='btn'>
             
-            <button onClick={()=>props.getImg(1)}>1</button>
-            <button onClick={()=>props.getImg(2)}>2</button>
-            <button onClick={()=>props.getImg(3)}>3</button>
-            <button onClick={()=>props.getImg(4)}>4</button>
-            <button onClick={()=>props.getImg(5)}>5</button>
+            <button className={renderImg()} onClick={()=>props.getImg(1)}>1</button>
+            <button className={renderImg()} onClick={()=>props.getImg(2)}>2</button>
+            <button className={renderImg()} onClick={()=>props.getImg(3)}>3</button>
+            <button className={renderImg()} onClick={()=>props.getImg(4)}>4</button>
+            <button className={renderImg()} onClick={()=>props.getImg(5)}>5</button> 
             </div>
         </div>
     )

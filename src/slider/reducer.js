@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-const reducer=(state,action)=>{
+const reducer=(state=0,action)=>{
         switch(action.type){
             case 'GET_IMG':
                 return 0+action.payload;
